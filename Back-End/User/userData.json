@@ -1,0 +1,37 @@
+[
+  {
+    "firstName":"Yash",
+    "middleName":"Vinod",
+    "lastName":"Kholi",
+    "dateOfBirth":"2017-03-17",
+    "mobileNo":9135680254,
+    "gender":"male",
+    "emailId":"yash@gmail.com",
+    "password":"test123"
+  },
+  {
+    "firstName":"Pratham",
+    "lastName":"Jog",
+    "dateOfBirth":"1990-03-27",
+    "mobileNo":9135680254,
+    "gender":"male",
+    "emailId":"pratham@gmail.com",
+    "password":"test123"
+  },
+  {
+    "firstName":"Balwant",
+    "lastName":"Patil",
+    "dateOfBirth":"1968-10-17",
+    "mobileNo":9135680254,
+    "gender":"male",
+    "bookings":[]
+  },
+  {
+    "firstName":"Mayur",
+    "lastName":"Patil",
+    "dateOfBirth":"1958-10-17",
+    "mobileNo":9134680254,
+    "gender":"male",
+    "bookings":[{"bookingId":"5fc3487a7878d130345232e5"}]
+  }
+]

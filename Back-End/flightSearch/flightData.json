@@ -1,0 +1,58 @@
+[
+  {
+    "airLine":"Air India",
+    "flightName":"AI-100",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":4000,
+    "seatCount":50
+  },
+  {
+    "airLine":"Air India",
+    "flightName":"AI-101",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":4500,
+    "seatCount":50
+  },
+  {
+    "airLine":"Air India",
+    "flightName":"AI-102",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":3500,
+    "seatCount":50
+  },
+  {
+    "airLine":"Spice Jet",
+    "flightName":"SJ-100",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":3000,
+    "seatCount":50
+  },
+  {
+    "airLine":"Spice Jet",
+    "flightName":"SJ-101",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":5000,
+    "seatCount":50
+  },
+  {
+    "airLine":"Go Air",
+    "flightName":"GA-100",
+    "source":"mumbai",
+    "destination":"gujrat",
+    "fare":4200,
+    "seatCount":50
+  },
+  {
+    "airLine":"Go Air",
+    "flightName":"GA-101",
+    "source":"mumbai",
+    "destination":"delhi",
+    "fare":37000,
+    "seatCount":50
+  }
+]
