@@ -1,0 +1,32 @@
+.card-header{
+  /* background-color:	#b0a0cc; */
+  background-color: #b0d7e4;
+  color: #fff;
+}
+
+.card {
+  background-color: #F0FFFF;
+  max-height: 900px;
+  max-width: 700px;
+}
+
+.radio{
+  margin-right: 5px;
+}
+
+label {
+  font-size: 15px;
+  color: #0c0c3d;
+}
+
+.title{
+  color: #0c0c3d;
+  text-align: center;
+  font-size: 30px;
+  min-height: 50px;
+  padding-top: 6px;
+}
+
+.btn{
+  background-color: #00688B;
+}

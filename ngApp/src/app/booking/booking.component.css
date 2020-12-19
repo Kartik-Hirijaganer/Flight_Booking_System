@@ -1,0 +1,71 @@
+
+span {
+  padding-right: 3rem;
+}
+
+table{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.user-form{
+  border: 5px solid #f3f0f0e8;
+  margin-left: 50px;
+  max-width: 700px;
+}
+
+.form{
+  padding: 10px;
+}
+
+h2{
+  background-color: #32CD32;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+}
+
+.btn{
+background-color: #00688B;
+color: white;
+}
+
+.card{
+  background-color: #79CDCD;
+  min-height: 300px;
+  margin-top: 0px;
+  margin-bottom: 100px;
+}
+
+h3{
+  color: #0c0c3d;
+}
+.form{
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.span-title{
+  color: whitesmoke;
+}
+
+::placeholder{
+  color: #212529;
+}
+
+thead{
+  font-size: 20px;
+  color:#0c0c3d;
+}
+
+.next{
+  margin-left: 20px;
+}
+
+::ng-deep .mat-step-header .mat-step-icon{
+  background-color: #00688B;
+}
+
+::ng-deep .mat-step-header .mat-step-icon-selected {
+  background-color: #00688B; 
+}

@@ -1,0 +1,31 @@
+#row{
+  padding: 100px 100px 100px 100px;
+}
+
+.checkIn{
+  margin-left: 30px;
+}
+
+#name{
+  margin-top: 15px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#head{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#data{
+  font-size: 18px;
+}
+
+.booking-table{
+  margin-bottom: 200px;
+}
+
+.btn{
+  background: #00688B;
+  color: #fff;
+}

@@ -1,0 +1,110 @@
+ <!-- upper section -->
+
+<div class="card">
+    <!-- <div *ngIf="_authService.loggedIn()">
+      <h1>Welcome !!</h1>
+    </div> -->
+    <div class="container">
+        <div class="row">
+        <div class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <strong><i class="fa fa-warning"></i> Attention!</strong> <marquee><p style="font-family: Impact; font-size: 18pt">Due to COVID-19 crisis Flights maybe cancelled. Wish you a safe journey!</p></marquee>
+      </div>
+      </div>
+    </div>
+  
+  <div class="upper-section">
+    <img class="" src="/assets/images/flight1.jpg">
+  </div>
+  <br>
+  <br>
+  <h1 class="title">SEARCH FLIGHTS</h1>
+  <br><br>
+  
+  <div class="search-box z-depth-5">
+    <form #searchForm="ngForm" class="form" (ngSubmit)="onSubmit(searchForm)">
+      <div class="form-row">
+        <!-- <div class="col-4 form-group">
+          <input #source="ngModel" [class.is-invalid]="source.invalid && source.touched" [(ngModel)]="flightSearchData.source" type="text" name="source" placeholder="FROM" class="form-control" required>
+          <small class="text-danger" [class.d-none]="source.valid || source.untouched">source is required</small>
+          <small class="text-danger" *ngIf="this.isSearchError">Source and Destination cannot be same</small>
+        </div> -->
+
+        <div class="col-4 form-group">                   
+          <input type="text" [(ngModel)]= "flightSearchData.source" name="source" #source="ngModel" [matAutocomplete]="auto" placeholder="FROM" required>
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <small class="text-danger" [class.d-none]="source.valid || source.untouched">source is required</small>
+          <small class="text-danger" *ngIf="this.isSearchError">Source and Destination cannot be same</small>
+        </div>
+  
+        <div class="form-row">
+          <a class="material-icons action-btn" (click)="swap(flightSearchData.source,flightSearchData.destination)">compare_arrows</a>
+        </div>
+  
+        <!-- <div class="col-4 form-group">
+          <input #destination="ngModel" [class.is-invalid]="destination.invalid &&destination.touched" [(ngModel)]="flightSearchData.destination" type="text" name="destination" class="form-control" placeholder="TO" required>
+          <small class="text-danger" [class.d-none]="destination.valid || destination.untouched">destination is required</small>
+        </div> -->
+        <div class="col-4 form-group">                   
+          <input type="text" [(ngModel)]= "flightSearchData.destination" name="destination" #destination="ngModel" [matAutocomplete]="auto" placeholder="TO" required>
+          <mat-autocomplete class="autoComplete example" #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+          <small class="text-danger" [class.d-none]="destination.valid || destination.untouched">destination is required</small>
+        </div>
+
+        <div class="col-3 form-group">
+          <input  #date="ngModel" [class.is-invalid]="date.invalid && date.touched" [(ngModel)]="flightSearchData.date" name="date" type="date" min="2020-12-17" class="form-control" placeholder="DATE">
+          <small class="text-danger" [class.d-none]="date.valid || date.untouched">Date is required</small>
+        </div>
+      </div>
+      <button [disabled]="!searchForm.form.valid" type="submit" class="btn btn-success search">SEARCH</button>
+    </form>
+ </div>
+ 
+ <br>
+ <small class="text-danger no-flights" *ngIf="this.noFLights">No flights found for this route</small>
+ 
+ <div class="col s7 table">
+   <table class="responsive-table highlight">
+       <thead>
+         <tr>
+           <th class="tbl-head">Air-Line</th>
+           <th></th>
+           <th class="tbl-head">Flight No</th>
+           <th class="tbl-head">From</th>
+           <th class="tbl-head">To</th>
+           <th class="tbl-head">Fare</th>
+           <th></th>
+         </tr>
+       </thead>
+       <tr class="dispForm" *ngFor="let f of searchService.flights">
+         <td>{{f.airLine}}</td>
+         <td>
+           <a class="action-btn">
+             <i class="material-icons">flight_takeoff</i>
+           </a>
+         </td>
+         <td>{{f.flightName}}</td>
+         <td>{{f.source}}</td>
+         <td>{{f.destination}}</td>
+         <td>{{f.fare | currency:'INR':'symbol'}}</td>
+         <td>
+           <div matTooltip="Login to book your ticket." [matTooltipDisabled]="_authService.loggedIn()">
+            <button type="button" [disabled]="!_authService.loggedIn()" (click)="bookNow(f)" class="btn btn-book">Book Now</button>
+           </div>
+          </td>
+       </tr>
+     </table>
+  </div>
+</div>
+ 
+<!-- <div class="container">
+  <router-outlet></router-outlet>            
+</div> -->

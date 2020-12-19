@@ -1,0 +1,34 @@
+
+<!-- new table -->
+
+<!-- user table -->
+<table class="highlight booking-table responsive-table">
+  <thead>
+    <tr id="head">
+        <th>NAME</th>
+        <th>BOOKING ID</th>
+        <th>AIR-LINE</th>
+        <th>FLIGHT</th>
+        <th>FROM</th>
+        <th>TO</th>
+        <th>FARE</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let f of this.bookedFlights">
+    <tr id="data">
+      <td>
+        <div id="name">{{f.userDetails.firstName}} {{f.userDetails.lastName}}</div>
+        <button class="waves-effect waves-light btn" *ngIf="this.isDisable" (click)="cancelBooking(f.bookingId)">cancel</button>
+        <button (click)="this.bookFlightService.checkIn(f)" *ngIf="this.isDisable" class="waves-effect waves-light btn checkIn">check-in</button>
+      </td>
+      <td>{{f.bookingId}}</td>
+      <td>{{f.flight.airLine.toUpperCase()}}</td>
+      <td>{{f.flight.flightName}}</td>
+      <td>{{f.flight.source.toUpperCase()}}</td>
+      <td>{{f.flight.destination.toUpperCase()}}</td>
+      <td>{{f.flight.fare | currency:'INR':'symbol'}}</td>
+    </tr>
+  </tbody>
+</table>
+<br><br><br>

@@ -1,0 +1,94 @@
+
+<div class="row">
+  <div class="col s12">
+    <div class="card z-depth-3">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s5 ipForm">
+
+            <form #flightForm="ngForm" (ngSubmit)="onSubmit(flightForm)">
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="adminService.selectedFlight._id">
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="airLine" #name="ngModel" [(ngModel)]="adminService.selectedFlight.airLine">
+                  <label>AirLine :
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="flightName" #name="ngModel" [(ngModel)]="adminService.selectedFlight.flightName" required>
+                  <label>Flight Name :
+                    <label class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="source" #name="ngModel" [(ngModel)]="adminService.selectedFlight.source">
+                  <label>From:</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="destination" #name="ngModel" [(ngModel)]="adminService.selectedFlight.destination">
+                  <label>To:</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="fare" #name="ngModel" [(ngModel)]="adminService.selectedFlight.fare">
+                  <label>Fare :</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn success" type="submit" [disabled]="!flightForm.valid">Submit</button>
+                  <button class="btn btn-danger" type="button" (click)="resetForm(flightForm)">Reset</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="vl"></div>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                  <thead>
+                    <tr>
+                      <th class="tbl-head">AIR-LINE</th>
+                      <th class="tbl-head">FLIGHT</th>
+                      <th class="tbl-head">FROM</th>
+                      <th class="tbl-head">TO</th>
+                      <th class="tbl-head">FARE</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tr class="dispForm" *ngFor="let f of adminService.flights">
+                    <td>{{f.airLine.toUpperCase()}}</td>
+                    <td>{{f.flightName.toUpperCase()}}</td>
+                    <td>{{f.source.toUpperCase()}}</td>
+                    <td>{{f.destination.toUpperCase()}}</td>
+                    <td>{{f.fare | currency:'INR':'symbol'}}</td>
+                    <td>
+                        <a class="action-btn" (click)="onEdit(f)">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <a class="action-btn" (click)="onDelete(f.flightName,flightForm)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                  </tr>
+                </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
