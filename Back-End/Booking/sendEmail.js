@@ -15,8 +15,8 @@ const mailSend = (email) => {
 
   //step 2
   let mailOptions = {
-    from: 'kartiktest351@gmail.com',
-    to: 'kartiktest351@gmail.com',
+    from: process.env.TESTEMAIL,
+    to: process.env.TESTEMAIL,
     //to: email,
     subject: 'Booking successfull',
     text: "Congrats ! you have succesfully booked your flight, don't forget to check-In and collect your boarding pass."

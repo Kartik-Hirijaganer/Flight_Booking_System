@@ -11,7 +11,7 @@ const sendSms = (mobileNo) => {
   .create({
      body: `Congrats  !! you have successfully created an account on BookMyFlight`,
      from: '+12059648073',
-     to: '+919619093821'
+     to: process.env.MOBILE
      //to: mobileNo
    })
   .then(message => console.log(message.sid))

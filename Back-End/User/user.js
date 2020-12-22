@@ -15,7 +15,7 @@ const mongoose = require('mongoose');
 
 const user = require('./userDataModel');
 
-mongoose.connect('mongodb+srv://Kartik:1234@cluster0.nvlfp.mongodb.net/user_project?retryWrites=true&w=majority', ()=>{
+mongoose.connect('mongodb+srv://Kartik:password@cluster0.nvlfp.mongodb.net/user_project?retryWrites=true&w=majority', ()=>{
   console.log('Database connected');
 });
 
