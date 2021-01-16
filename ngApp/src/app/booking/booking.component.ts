@@ -68,7 +68,7 @@ export class BookingComponent implements OnInit {
   //payment method
   payWithRazor(){ 
     let options:any = {
-        "key": "",
+        "key": "rzp_test_UKOSZWVmPKBrfK",
         "amount": this.bookFlightService.flight[0].fare*100,
         "name": "Flight Booking",
         "description": "Flight booking payment",

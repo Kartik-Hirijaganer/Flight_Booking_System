@@ -26,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'adminHome', component: AdminHomeComponent,
-    canActivate: [AuthGuard]
+    // canActivate: [AuthGuard]
   },
   {
     path: 'booking', component: BookingComponent
