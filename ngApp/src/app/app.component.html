@@ -1,13 +1,9 @@
-<!-- <nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg ">
   <a class="navbar-brand" routerLink="/mainHome" routerLinkActive="active">BookMyFlight</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-     
+     <!-- something -->
      <a class="nav-link view-all-booking" *ngIf="_authService.loggedIn()" style="cursor:pointer" [routerLink]="['/viewallbookings', this.bookFlightService.userId, this.bookFlightService.userType]" routerLinkActive="active">View all bookings</a>
     </ul>
     <ul class="navbar-nav">
@@ -16,35 +12,17 @@
         <a class="nav-link" style="cursor:pointer" routerLink="/register" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()" routerLinkActive="active">Logout</a>
     </ul>
   </div>
-</nav> -->
-
-<nav class="navbar navbar-expand-lg navbar-light">  
-  <a class="navbar-brand" routerLink="/mainHome" routerLinkActive="active">BookMyFlight</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <a class="nav-link view-all-booking" *ngIf="_authService.loggedIn()" style="cursor:pointer" [routerLink]="['/viewallbookings', this.bookFlightService.userId, this.bookFlightService.userType]" routerLinkActive="active">View all bookings</a>
-    </ul>
-<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->   
-    <ul class="navbar-nav">
-      <a class="nav-link login" *ngIf="!_authService.loggedIn()" routerLink='/login' routerLinkActive= "active">Login</a>
-      <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink='/register' routerLinkActive= "active">Register</a>
-      <a class="nav-link" style="cursor:pointer" routerLink="/register" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()" routerLinkActive="active">Logout</a>      
-    </ul>
-  </div>
 </nav>
 
 <router-outlet></router-outlet>
+
 
 <footer class="page-footer">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
         <h5 class="white-text up-footer-head">About us</h5>
-        <p class="grey-text text-lighten-4 up-footer">At BookMyFlight, you can find the best of deals and cheap air tickets to any place you want by booking your tickets that are affordable and customized to your convenience on our website or app.</p>
+        <p class="grey-text text-lighten-4 up-footer">At BookMyFlight, you can find the best of deals and cheap air tickets to any place you want by booking your tickets that are affordable and customized to your convenience on our website or app. We also have a 24/7 dedicated helpline to cater to our customer’s queries and concerns. Serving over 5 million happy customers, we are glad to fulfill the dreams of folks who need a quick and easy means to find air tickets.</p>
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text up-footer-head">Contact us</h5>

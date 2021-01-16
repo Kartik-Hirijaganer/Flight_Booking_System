@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './auth.service';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //import { UserHomeComponent } from './user-home/user-home.component';
 //import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AuthGuard } from './auth.guard';
@@ -39,8 +38,7 @@ import { BookFlightService } from './bookService/book-flight.service';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    NgbModule
+    MaterialModule
   ],
   providers: [
     AuthService,

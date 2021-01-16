@@ -67,32 +67,3 @@ div.card{
   border-left: 6px solid #5c9c9c;
   height: 600px;
 }
-
-/* media queries */
-@media only screen and (max-width: 990px){
-  form div.input-field input{
-    padding-left: 5px !important;
-  }
-
-  .input-field>label{
-    font-size: 8px;
-  }
- 
-  div.card{
-    margin-top: 20px;
-    margin-left: 0px;
-  }
-  
-  .tbl-head{
-    font-size: 10px;
-  }
-  
-  .dispForm{
-    font-size: 5px;
-  }
-  
-  .vl {
-    border-left: 6px solid #5c9c9c;
-    height: 50%;
-  }
-}
